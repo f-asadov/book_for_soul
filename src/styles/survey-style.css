@@ -1,0 +1,91 @@
+.survey-container {
+  font-family: "Raleway", "Monsterat";
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  opacity: 0;
+  text-align: center;
+  animation: ani 3.5s forwards;
+  transition: 1s;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.box {
+  opacity: 0;
+  animation: ani 3.5s forwards;
+  transition: 1s;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 450px;
+  height: 450px;
+  padding: 40px;
+  transform: translate(-50%, 50%);
+  background: #fffafa;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.survey-container input {
+  font-family: "Raleway", "Monsterat";
+  font-size: 40px;
+  background: 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(31, 27, 27);
+  transition: 0.5s;
+}
+
+.survey-container input:focus {
+  margin-bottom: 5px;
+  transition: 0.5s;
+  border-bottom: 2px solid rgb(94, 91, 91);
+}
+
+label {
+  font-size: 44px;
+  font-family: "Raleway", "Monsterat";
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  font-size: 48px;
+  cursor: pointer;
+  transition: 1s;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.arrow-animation {
+  animation-name: arrow-animation;
+  animation-timing-function: linear;
+}
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}

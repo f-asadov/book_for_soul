@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Greeting from './components/greeting';
+import './App.css'
+import Survey from './components/survey';
+
+const state = {
+  is:true
+}
+
+
 
 function App() {
+  const [greetingVisible , setGreetingVisible] = useState<boolean>(true)
+  const [anketaVisible,setAnketaVisible] = useState<boolean>(false)
+  
+  const updateState = (greetingState:boolean) =>{
+    setGreetingVisible(greetingState)
+    setAnketaVisible(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+     {greetingVisible && <Greeting updateState = {updateState}/>}
+     {anketaVisible && <Survey/>}
     </div>
   );
+
+  
 }
 
 export default App;
