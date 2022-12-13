@@ -3,7 +3,8 @@ import '../styles/greeting-style.css'
 import Survey from './survey'
 
 type props = {
-    updateState:(state:boolean)=>void;
+    updateGreetingState:(state:boolean)=>void,
+    updateSurveyVisible:(state:boolean)=>void;
 }
 
 const Greeting = (props:props) => {
@@ -17,13 +18,14 @@ const Greeting = (props:props) => {
         <h1 className='journey'>Happy Journey!</h1>
         <div className='arrow-container'>
             <span className='arrow arrow-animation' onClick={() => {
-                props.updateState(false)
+                props.updateGreetingState(false)
+                props.updateSurveyVisible(true)
                 setStartJourney(true)
             }} >&#8594;</span>
         </div>
         
     </div>
-    {startJourney && <Survey/>}
+    
     
 }
 
