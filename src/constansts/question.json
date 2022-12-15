@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "title": "Question 1",
+      "title": "Вы любите читать?",
       "answers": [
         { "id": 1, "answer": "da" },
         { "id": 2, "answer": "net" },
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "title": "Question 2",
+      "title": "Как вы относитесь к сексу?",
       "answers": [
         { "id": 1, "answer": "konecno" },
         { "id": 2, "answer": "ranwe" }
@@ -19,7 +19,7 @@
     },
     {
       "id": 3,
-      "title": "Quiestion 3",
+      "title": "Стоит ли садиться на бутылку?",
       "answers": [
         { "id": 1, "answer": "konecno net" },
         { "id": 2, "answer": "ranwe" }

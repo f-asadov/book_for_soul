@@ -9,13 +9,13 @@ type QuizPropsType = {
 
 const Quiz = (props: QuizPropsType) => {
     const quiestionArray = questions.questions
-    const [a,A] = useState<number>(0)
-    const [step,seStep] = useState<number>(0)
-    
+    const [progress, setProgress] = useState<number>(0)
+    const [step, setStep] = useState<number>(0)
+    const [result,setResult] = useState<IQuestion[]>([])
     const currentQuestion = quiestionArray[step]
-    
-    const onClickAnswer = (index:number) =>{
-        
+
+    const onClickAnswer = (index: number) => {
+        setStep(step + 1)
     }
 
     return <div className="question-container">
@@ -28,11 +28,11 @@ const Quiz = (props: QuizPropsType) => {
 
         </div>
         <div className='question-list'>
-           <progress value={a} max={100} >ss</progress>
-           <h1>{currentQuestion.title}</h1>
-           <ul  onClick={()=>A(a+20)}>
-            {currentQuestion.answers.map((answer,index)=><li key={answer.answer} onClick={()=>onClickAnswer(index)}>{answer.answer}</li>)}
-           </ul>
+            <progress value={progress} max={100} >ss</progress>
+            <h1>{currentQuestion.title}</h1>
+            <ul onClick={() => setProgress(progress + 20)}>
+                {currentQuestion.answers.map((answer, index) => <li  key={answer.answer} onClick={() => onClickAnswer(index)}>{answer.answer}</li>)}
+            </ul>
         </div>
 
     </div>
