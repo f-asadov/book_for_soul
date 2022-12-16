@@ -7,5 +7,13 @@ export interface ICharacter {
 export interface IQuestion{
     id:number,
     title:string,
-    answers:{id:number,answer:string}[]
+    answers:{id:number,answer:string,sanguine:number,choleric:number,phlegmatic:number,melancholic:number}[]
+}
+
+export interface IResult{
+    answer:string,
+    sanguine:number,
+    choleric:number,
+    phlegmatic:number,
+    melancholic:number
 }

@@ -22,17 +22,8 @@
   opacity: 0;
   animation: ani 3.5s forwards;
   transition: 1s;
-  position: absolute;
-  top: -10%;
-  left: 50%;
-  width: 450px;
-  height: 450px;
-  padding: 40px;
-  transform: translate(-50%, 50%);
   background: #fffafa;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
 }
 
 .survey-container input {

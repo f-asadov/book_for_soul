@@ -5,6 +5,17 @@
   height: 100vh;
   overflow: hidden;
   font-family: "Raleway", "Monsterat";
+  animation: ani 3.5s forwards;
+  transition: 1s;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .top-person {
@@ -28,10 +39,9 @@
 }
 
 .question-list {
-  
   width: 45vw;
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +89,7 @@ ul{
 }
 
 li{
-  width: 400px;
+  width: 500px;
   text-align: center;
   cursor: pointer;
   font-size: 32px;
@@ -93,4 +103,34 @@ li:hover{
   background-color: #597947;
   color:#fffafa;
   transition: .5s;
+}
+
+.arrow {
+  font-size: 48px;
+  cursor: pointer;
+  transition: 1s;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  
+}
+
+.arrow-animation {
+  animation-name: arrow-animation;
+  animation-timing-function: linear;
+}
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateX(10px)
+  }
+  50% {
+    transform: translateX(0)
+  }
+  75% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(10px)
+  }
 }
