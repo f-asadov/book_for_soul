@@ -5,31 +5,31 @@
       "answers": [
         {
           "answer": "Agile and inquisitive",
-          "sanguine": 20,
-          "choleric": 10,
-          "phlegmatic": 5,
-          "melancholic": 21
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Calm and not in a hurry",
-          "sanguine": 56,
-          "choleric": 45,
-          "phlegmatic": 11,
-          "melancholic": 114
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 10,
+          "melancholic": 0
         },
         {
           "answer": "Are restless and fidgety",
-          "sanguine": 132,
-          "choleric": 22,
-          "phlegmatic": 22,
-          "melancholic": 1
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Are withdrawn and slow",
-          "sanguine": 132,
-          "choleric": 22,
-          "phlegmatic": 22,
-          "melancholic": 1
+          "sanguine":0,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 10
         }
       ]
     },
@@ -38,30 +38,30 @@
       "answers": [
         {
           "answer": "Resourceful and fastidious",
-          "sanguine": 45,
-          "choleric": 12,
-          "phlegmatic": 41,
-          "melancholic": 112
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 10,
+          "melancholic": 0
         },
         {
           "answer": "calm and cool-headed",
-          "sanguine": 23,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Determined",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Vulnerable and sensitive",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         }
       ]
@@ -71,30 +71,30 @@
       "answers": [
         {
           "answer": "It's fine.",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "I can't say for sure",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         },
         {
           "answer": "it's high but not overdrawn.",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Understated",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         }
       ]
@@ -104,31 +104,31 @@
       "answers": [
         {
           "answer": "You feel as you normally do",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "At first, you'll look around you",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         },
         {
           "answer": "You'll be withdrawn and mopey",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         },
         {
           "answer": "Try to fit in right away",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         }
       ]
     },
@@ -137,30 +137,30 @@
       "answers": [
         {
           "answer": "Try to weigh the pros and cons and choose the right solution",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         },
         {
           "answer": "Observe the others and choose the right option for you",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Panic and you may make a mistake at first ",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "get confused and sad (cry)",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         }
       ]
@@ -170,31 +170,31 @@
       "answers": [
         {
           "answer": "Ask the passersby",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "When you get home, when you find out, you go",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         },
         {
           "answer": "Try to find out for yourself (with your own methods)",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "You go, rely on your intuition",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         }
       ]
     },
@@ -203,31 +203,31 @@
       "answers": [
         {
           "answer": "Rationality (rational)",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         },
         {
           "answer": "Poise(calm)",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         },
         {
           "answer": "Positivity (always in good spirits)",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "High energy",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         }
       ]
     },
@@ -236,31 +236,31 @@
       "answers": [
         {
           "answer": "Get very upset (you won't do anything)",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         },
         {
           "answer": "Throw the object again in my heart (you will get angry)",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Vigorously duck to fix it",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Think calmly about what can be done and choose the best option",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         }
       ]
     },
@@ -269,31 +269,31 @@
       "answers": [
         {
           "answer": "Try to remember something and solve it on your own",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 10,
+          "choleric": 0,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "Go crazy and don't go to the exam",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
-          "melancholic": 10
+          "sanguine": 0,
+          "choleric": 10,
+          "phlegmatic": 0,
+          "melancholic": 0
         },
         {
           "answer": "You'll get bored, you'll let it go",
-          "sanguine": 50,
-          "choleric": 30,
-          "phlegmatic": 10,
+          "sanguine": 0,
+          "choleric": 0,
+          "phlegmatic": 0,
           "melancholic": 10
         },
         {
           "answer": "All is not lost, you will improvise",
-          "sanguine": 50,
-          "choleric": 30,
+          "sanguine": 0,
+          "choleric": 0,
           "phlegmatic": 10,
-          "melancholic": 10
+          "melancholic": 0
         }
       ]
     }

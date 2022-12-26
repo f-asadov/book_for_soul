@@ -17,3 +17,12 @@ export interface IResult{
     phlegmatic:number,
     melancholic:number
 }
+
+export interface IBook{
+    bookName: string;
+    description: string;
+    sanguine: number;
+    choleric: number;
+    phlegmatic: number;
+    melancholic: number;
+}

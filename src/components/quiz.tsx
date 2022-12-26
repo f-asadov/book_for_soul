@@ -1,12 +1,14 @@
-import { ICharacter, IQuestion, IResult } from '../interfaces'
+import { IBook, ICharacter, IQuestion, IResult } from '../interfaces'
 import '../styles/quiz-style.css'
 import questions from '../constansts/question.json'
+import books from '../constansts/books.json'
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import "../styles/slider.css";
+import poxor from "../images/poxor.jpg"
 
 
 type QuizPropsType = {
@@ -21,18 +23,23 @@ const inititalState: IResult = {
     melancholic: 0
 }
 
+
 const Quiz = (props: QuizPropsType) => {
     const quiestionArray = questions.questions
+    const bookAray = books.allBooks
     const [progress, setProgress] = useState<number>(0)
     const [step, setStep] = useState<number>(0)
     const [result, setResult] = useState<IResult>(inititalState)
-    const [test, setTest] = useState<boolean>(false)
+    const [one,setOne] = useState<IBook[]>([])
+    const [two,setTwo] = useState<IBook[]>([])
+    const [finish, setFinish] = useState<boolean>(false)
     const currentQuestion = quiestionArray[step]
+    const finalBooks = one.concat(two)
 
     const Slider = (book: any) => {
         return (
             <>
-                <Swiper
+                {finish && <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
                     centeredSlides={true}
@@ -42,29 +49,17 @@ const Quiz = (props: QuizPropsType) => {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    <SwiperSlide> <div className='book-cell'>
-                        <img id='image' className='book-image' src="https://data.whicdn.com/images/344838588/original.jpg" alt="image" />
-                        <span className='book-description'>Богатый наследник и потомок пирата Генри Моргана Фрэнсис отправляется на поиски сокровищ своего предка в Южную Америку. На пути он знакомится со своим дальним родственником — Генри Морганом. Их ждут опасные приключения, неведомые земли и любовь…</span>
-                        <span className='test'>Подойдет для : Сангвиник</span>
-                    </div>
-                    </SwiperSlide>
-                    <SwiperSlide> <div className='book-cell'>
-                        <img id='image' className='book-image' src="https://data.whicdn.com/images/344838588/original.jpg" alt="image" />
-                        <span className='book-description'>Богатый наследник и потомок пирата Генри Моргана Фрэнсис отправляется на поиски сокровищ своего предка в Южную Америку. На пути он знакомится со своим дальним родственником — Генри Морганом. Их ждут опасные приключения, неведомые земли и любовь…</span>
-                        <span className='test'>Подойдет для : Сангвиник</span>
-                    </div></SwiperSlide>
-                    <SwiperSlide> <div className='book-cell'>
-                        <img id='image' className='book-image' src="https://data.whicdn.com/images/344838588/original.jpg" alt="image" />
-                        <span className='book-description'>Богатый наследник и потомок пирата Генри Моргана Фрэнсис отправляется на поиски сокровищ своего предка в Южную Америку. На пути он знакомится со своим дальним родственником — Генри Морганом. Их ждут опасные приключения, неведомые земли и любовь…</span>
-                        <span className='test'>Подойдет для : Сангвиник</span>
-                    </div></SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
-                </Swiper>
+                    {finalBooks.map((book) => {
+                        return <SwiperSlide>
+                            <div className='book-cell'>
+                                <img id='image' className='book-image' src={poxor} alt="image" />
+                                <span className='book-description'>{book.description}</span>
+                                <span className='test'>{book.bookName}</span>
+                            </div>
+                        </SwiperSlide>
+                    })}
+                </Swiper>}
+
             </>
         );
     }
@@ -83,11 +78,33 @@ const Quiz = (props: QuizPropsType) => {
         }
     }
 
-    const showResult = () => {
-        let divElem = document.getElementById('question')
-        console.log(divElem)
-        setTest(true)
+
+    const Pers = () => {
+        bookAray.map((book) => {
+            let resultdata = 0;
+            if (Math.abs(book.choleric - result.choleric) <= 20) {
+                resultdata++;
+            }
+            if (Math.abs(book.melancholic - result.melancholic) <= 20) {
+                resultdata++;
+            }
+            if (Math.abs(book.phlegmatic - result.phlegmatic) <= 20) {
+                resultdata++
+            }
+            if (resultdata === 3) {
+                console.log(book)
+                setOne((prev) => [...prev, book])
+            } else if (resultdata === 2) {
+                if (Math.abs(book.sanguine - result.sanguine) <= 20) {
+                    console.log(book)
+                    setTwo((prev)=>[...prev,book])
+                }
+            }
+        })
     }
+
+    console.log(one,two)
+
 
     return <div className="question-container">
         <div className="top-person">
@@ -98,7 +115,7 @@ const Quiz = (props: QuizPropsType) => {
             </div>
 
         </div>
-        <div id='question' className='question-list' style={{ display: test ? 'none' : '' }}>
+        <div id='question' className='question-list' style={{ display: finish ? 'none' : '' }}>
             <progress value={progress} max={100} >ss</progress>
             <h1>{currentQuestion.title}</h1>
             <ul onClick={() => setProgress(progress + (100 / quiestionArray.length))}>
@@ -106,11 +123,14 @@ const Quiz = (props: QuizPropsType) => {
                     <li key={answer.answer} onClick={() => onClickAnswer(index, answer)}>{answer.answer}</li>
                 )}
             </ul>
-            {progress >= 100 && <span onClick={showResult} className='arrow arrow-animation'>&#8594;</span>}
+            {progress >= 100 && <span onClick={() => {
+                setFinish(true);
+                Pers()
+                console.log(result)
+            }}
+                className='arrow arrow-animation'>&#8594;</span>}
         </div>
         <Slider />
-        {test && <div className='result'>
-        </div>}
 
 
     </div>
