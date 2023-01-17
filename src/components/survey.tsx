@@ -6,15 +6,26 @@ import '../styles/survey-style.css'
 
 type SurveyPropsType = {
     updateSurveyVisible: (state: boolean) => void,
-    updateQuizVisible:(state:boolean) => void;
-    person:ICharacter;
-    setPerson:(person:ICharacter)=>void
+    updateQuizVisible: (state: boolean) => void;
+    person: ICharacter;
+    setPerson: (person: ICharacter) => void
 }
 
-const Survey = (props:SurveyPropsType) => {
+const Survey = (props: SurveyPropsType) => {
 
-    // const [person, setPerson] = useState<ICharacter>(initialPerson)
-    const [startSurvey,setStartSurvey] = useState<boolean>(false)
+    const [startSurvey, setStartSurvey] = useState<boolean>(false)
+    const [isPersonFill, setIsPersonFill] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (props.person.name.length !== 0 && props.person.age > 0) {
+            setIsPersonFill(true)
+        }
+        else{
+            setIsPersonFill(false)
+        }
+    }, [props.person])
+
+    console.log(isPersonFill)
 
     const personCharacter = (event: React.ChangeEvent<HTMLInputElement>) => {
 
@@ -48,20 +59,22 @@ const Survey = (props:SurveyPropsType) => {
 
     return (<div style={{ display: startSurvey ? 'none' : '' }}>
         <div className="survey-container">
-            <input type="text" placeholder="What is four name?" onChange={personCharacter} name='name' required/>
+            <input type="text" placeholder="What is four name?" onChange={personCharacter} name='name' required />
             <input type="number" placeholder="How old are you?" onChange={personCharacter} name='age' required />
             <div className='happy-level'>
                 <input type="range" placeholder="How happy are you?" onChange={personCharacter} name='happiness' id='happy' step='25' value={props.person.happiness} />
                 <label htmlFor="happy">Your Happinnes Level</label>
                 {getHappinnesLevel(props.person.happiness)}
             </div>
-            <div className='arrow-container'>
-                <span className='arrow arrow-animation' onClick={() => {
-                props.updateSurveyVisible(false)
-                props.updateQuizVisible(true)
-                setStartSurvey(true)
-            }}>&#8594;</span>
-            </div>
+            {isPersonFill &&
+                <div className='arrow-container'>
+                    <span className='arrow arrow-animation' onClick={() => {
+                        props.updateSurveyVisible(false)
+                        props.updateQuizVisible(true)
+                        setStartSurvey(true)
+                    }}>&#8594;</span>
+                </div>}
+
         </div>
     </div>)
 }

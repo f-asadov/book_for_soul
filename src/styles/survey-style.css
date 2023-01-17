@@ -48,6 +48,7 @@ label {
 }
 
 .arrow-container {
+  transition: 1s;
   display: flex;
   justify-content: center;
 }

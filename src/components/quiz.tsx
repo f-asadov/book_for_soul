@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import "../styles/slider.css";
-import poxor from "../images/poxor.jpg"
+
 
 
 
@@ -43,7 +43,7 @@ const Quiz = (props: QuizPropsType) => {
                 {finish && <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
-                    centeredSlides={true}
+                    centeredSlides={false}
                     pagination={{
                         clickable: false,
                     }}
@@ -55,8 +55,8 @@ const Quiz = (props: QuizPropsType) => {
                         return <SwiperSlide>
                             <div className='book-cell'>
                                 <div className='book-image'>
-                                    <img id='image' src={require(book.imageSrc).default} alt="image" />
-                                    </div>
+                                    <img src={require('../images/' + book.imageSrc + '.jpg')} alt={book.bookName} />
+                                </div>
                                 <div className='book-description'>{book.description}</div>
                                 <div className='test'><span >{book.bookName}</span></div>
                             </div>
