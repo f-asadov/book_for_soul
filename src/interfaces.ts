@@ -25,4 +25,5 @@ export interface IBook{
     choleric: number;
     phlegmatic: number;
     melancholic: number;
+    imageSrc:string
 }

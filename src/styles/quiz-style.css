@@ -148,7 +148,6 @@ li:hover{
 .book-cell{
   margin-bottom: 250px;
   width: 250px ;
-  height: 500px;
   border: 1px solid rgba(0, 0, 0, 0.708);
   border-radius: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -159,19 +158,24 @@ li:hover{
 
 .book-image{
   height: 200px;
-  margin-right: 5px;
+}
+.book-image img{
+  height: 200px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
 
 .book-description{
+  height: 250px;
+  overflow-y: auto;
   font-size: 14px;
   font-weight: 800;
   text-align: justify;
-  padding: 0px 2px 0px 2px;
+  padding: 0px 3px 0px 3px;
 }
 
 .test{
+  height: 50px;
   font-weight: 800;
   text-align: center;
 }

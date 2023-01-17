@@ -11,6 +11,7 @@ import "../styles/slider.css";
 import poxor from "../images/poxor.jpg"
 
 
+
 type QuizPropsType = {
     person: ICharacter;
 }
@@ -30,8 +31,8 @@ const Quiz = (props: QuizPropsType) => {
     const [progress, setProgress] = useState<number>(0)
     const [step, setStep] = useState<number>(0)
     const [result, setResult] = useState<IResult>(inititalState)
-    const [one,setOne] = useState<IBook[]>([])
-    const [two,setTwo] = useState<IBook[]>([])
+    const [one, setOne] = useState<IBook[]>([])
+    const [two, setTwo] = useState<IBook[]>([])
     const [finish, setFinish] = useState<boolean>(false)
     const currentQuestion = quiestionArray[step]
     const finalBooks = one.concat(two)
@@ -44,17 +45,20 @@ const Quiz = (props: QuizPropsType) => {
                     spaceBetween={30}
                     centeredSlides={true}
                     pagination={{
-                        clickable: true,
+                        clickable: false,
                     }}
                     modules={[Pagination]}
                     className="mySwiper"
                 >
                     {finalBooks.map((book) => {
+                        { console.log(book.imageSrc) }
                         return <SwiperSlide>
                             <div className='book-cell'>
-                                <img id='image' className='book-image' src={poxor} alt="image" />
-                                <span className='book-description'>{book.description}</span>
-                                <span className='test'>{book.bookName}</span>
+                                <div className='book-image'>
+                                    <img id='image' src={require(book.imageSrc).default} alt="image" />
+                                    </div>
+                                <div className='book-description'>{book.description}</div>
+                                <div className='test'><span >{book.bookName}</span></div>
                             </div>
                         </SwiperSlide>
                     })}
@@ -92,18 +96,18 @@ const Quiz = (props: QuizPropsType) => {
                 resultdata++
             }
             if (resultdata === 3) {
-                console.log(book)
+
                 setOne((prev) => [...prev, book])
             } else if (resultdata === 2) {
                 if (Math.abs(book.sanguine - result.sanguine) <= 20) {
-                    console.log(book)
-                    setTwo((prev)=>[...prev,book])
+
+                    setTwo((prev) => [...prev, book])
                 }
             }
         })
     }
 
-    console.log(one,two)
+
 
 
     return <div className="question-container">
